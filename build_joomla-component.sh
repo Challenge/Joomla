@@ -26,10 +26,9 @@ SCRIPT_PATH=$(dirname $(readlink -f $0))
 # Create build folder
 mkdir -p ${SCRIPT_PATH}/${BUILD_FOLDER}
 
-
 ### Main
 # Loop through all files in the directory
-for f in ${SCRIPT_PATH}; do
+for f in $(ls -1 ${SCRIPT_PATH}); do
 
     # File is a directory and starts with $COMPONENT_START_NAME
     if [[ -d ${f} ]] && [[ ${f} == "$COMPONENT_START_NAME"* ]]; then
