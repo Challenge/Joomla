@@ -8,8 +8,7 @@ EXTENSION=".zip"
 SCRIPT_PATH=$(readlink -f $(pwd))
 
 # Run the cleanup
-echo "${SCRIPT_PATH}/${BUILD_FOLDER}/*${EXTENSION}"
-rm -rf "${SCRIPT_PATH}/${BUILD_FOLDER}/*${EXTENSION}"
+rm -rf "${SCRIPT_PATH}"/"${BUILD_FOLDER}"/*${EXTENSION}
 
 
 
